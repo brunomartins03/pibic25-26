@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry} % Margens ABNT
+\usepackage{setspace} % Espaçamento entre linhas
+\onehalfspacing % Espaçamento 1,5 (padrão ABNT)
+
+% Dados do trabalho
+\newcommand{\nomealuno}{Nome do(a) Aluno(a)}
+\newcommand{\titulotrabalho}{Título do Plano de Trabalho}
+\newcommand{\nomeorientador}{Nome do(a) Orientador(a)}
+\newcommand{\instituicao}{Instituição}
+\newcommand{\programa}{Programa de Iniciação Científica}
+\newcommand{\anorealizacao}{Ano de realização}
+
+\begin{document}
+
+% ---------- TÍTULO ----------
+\begin{center}
+    {\large \nomealuno}
+
+    \vspace{0.3cm}
+
+    {\Large \bfseries \titulotrabalho}
+
+    \vspace{0.3cm}
+
+    {\large \nomeorientador}
+
+    \vspace{0.3cm}
+
+    {\large \instituicao}
+
+    \vspace{0.3cm}
+
+    {\large \programa}
+
+    \vspace{0.3cm}
+
+    {\large \anorealizacao}
+\end{center}
+
+\vspace{1cm}
+
+% ---------- RESUMO ----------
+\section*{Resumo}
+Texto do resumo (até 250 palavras).
+
+\vspace{0.5cm}
+\noindent \textbf{Palavras-chave:} palavra1, palavra2, palavra3.
+
+\newpage
+
+% ---------- INTRODUÇÃO ----------
+\section{Introdução}
+
+Contextualize o tema, apresente os objetivos e a justificativa do projeto.
+
+
+% ---------- REFERENCIAL TEÓRICO ----------
+\section{Referencial Teórico}
+
+Apresente os principais estudos e conceitos que embasam o projeto.
+
+
+% ---------- METODOLOGIA ----------
+\section{Metodologia}
+
+Descreva os métodos e técnicas utilizados na realização do trabalho.
+
+
+% ---------- RESULTADOS E DISCUSSÃO ----------
+\section{Resultados e Discussão}
+
+Apresente os resultados obtidos e discuta-os criticamente.
+
+
+% ---------- CONSIDERAÇÕES FINAIS / CONCLUSÃO ----------
+\section{Considerações Finais / Conclusão}
+
+Síntese dos achados, contribuições, limitações e sugestões futuras. \cite{exemplo2020}.
+
+% ---------- REFERÊNCIAS ----------
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{exemplo2020}
+SOBRENOME, Nome.
+\textit{Título da obra}.
+Edição. Cidade: Editora, Ano.
+
+\bibitem{exemplo2021}
+SOBRENOME, Nome.
+Título do artigo.
+\textit{Nome da Revista}, Cidade, v. X, n. X, p. XX-XX, Ano.
+
+\end{thebibliography}
+
+\end{document}
+
