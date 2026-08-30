@@ -6,14 +6,15 @@
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry} % Margens ABNT
 \usepackage{setspace} % Espaçamento entre linhas
 \onehalfspacing % Espaçamento 1,5 (padrão ABNT)
+\usepackage[alf,num=false,abnt-etal-cite=2,abnt-etal-list=0,abnt-etal-text=it]{abntex2cite}
 
 % Dados do trabalho
-\newcommand{\nomealuno}{Nome do(a) Aluno(a)}
-\newcommand{\titulotrabalho}{Título do Plano de Trabalho}
-\newcommand{\nomeorientador}{Nome do(a) Orientador(a)}
-\newcommand{\instituicao}{Instituição}
+\newcommand{\nomealuno}{Bruno Martins Valério Bomfim}
+\newcommand{\titulotrabalho}{Uma proposta de implementação de ambiente virtual para prover recursos virtuais para disciplinas de computação}
+\newcommand{\nomeorientador}{Prof. Dr. Fernando William Cruz}
+\newcommand{\instituicao}{Faculdade de Ciências e Tecnologias em Engenharia/Universidade de Brasília — FCTE/UnB}
 \newcommand{\programa}{Programa de Iniciação Científica}
-\newcommand{\anorealizacao}{Ano de realização}
+\newcommand{\anorealizacao}{2026}
 
 \begin{document}
 
@@ -55,6 +56,7 @@ Texto do resumo (até 250 palavras).
 
 % ---------- INTRODUÇÃO ----------
 \section{Introdução}
+\label{intro}
 
 Contextualize o tema, apresente os objetivos e a justificativa do projeto.
 
@@ -62,14 +64,44 @@ Contextualize o tema, apresente os objetivos e a justificativa do projeto.
 % ---------- REFERENCIAL TEÓRICO ----------
 \section{Referencial Teórico}
 
-Apresente os principais estudos e conceitos que embasam o projeto.
-
-
 % ---------- METODOLOGIA ----------
 \section{Metodologia}
 
+Esta seção descreve os métodos que direcionaram as atividades realizadas neste projeto de iniciação científica. Apresenta-se também a classificação desta pesquisa e o respectivo levantamento bibliográfico, além de detalhamentos sobre a prova de conceito e o cronograma de atividades.
+
 Descreva os métodos e técnicas utilizados na realização do trabalho.
 
+\subsection{Classificação da Pesquisa}
+\label{test}
+
+\citeonline[p.~33]{gerhardt_silveira} definem a pesquisa científica como \lq\lq o resultado de um inquérito ou exame minucioso, realizado com o objetivo de resolver um problema, recorrendo a procedimentos científicos\rq\rq. Seguindo a taxonomia proposta por estas autoras, é apresentada abaixo a classificação desta pesquisa quanto à \textbf{abordagem}, \textbf{natureza}, \textbf{objetivo} e \textbf{procedimentos}.
+
+\subsubsection{Abordagem}
+
+Esta pesquisa possui abordagem \textbf{qualitativa e quantitativa} \cite[p. ~33-36]{gerhardt_silveira}. O caráter \textbf{qualitativo} está relacionado à análise criteriosa de técnicas existentes na literatura científica para a resolução do problema proposto na seção \ref{intro}. De forma complementar, o aspecto \textbf{quantitativo} está relacionado à coleta e estudo de métricas concernentes à performance da solução proposta (veja \ref{levantamento}).
+
+\subsubsection{Natureza}
+
+Esta pesquisa possui natureza \textbf{aplicada} \cite[p. ~36-37]{gerhardt_silveira}, haja vista que almeja engendrar conhecimentos para a solução prática de um problema específico, a saber, o problema de compartilhamento dos laboratórios da FCTE/UnB.
+
+\subsubsection{Objetivos}
+
+Os objetivos deste estudo são \textbf{exploratórios} \cite[p.~37-38]{gerhardt_silveira}, envolvendo, assim, levantamento bibliográfico, e o estudo de caso do laboratório LDS da FCTE.
+
+\subsubsection{Procedimentos}
+
+Adotou-se a \textbf{pesquisa bibliográfica} \cite[p.~39]{gerhardt_silveira} cujo objetivo concentrou-se em identificar soluções propostas pela literatura científica para a implementação de gêmeos digitais em ambiente de realidade virtual ou aumentada. Ademais, a \textbf{pesquisa experimental} \cite[p.~38]{gerhardt_silveira} buscou construir uma solução para virtualização do laboratório LDS e a construção de uma prova de conceito no ambiente Decentraland.
+
+\subsection{Levantamento Bibliográfico}
+\label{levantamento}
+
+\subsubsection{Strings de Busca}
+
+\subsubsection{Critérios de Seleção}
+
+\subsection{Prova de Conceito}
+
+\subsection{Cronograma}
 
 % ---------- RESULTADOS E DISCUSSÃO ----------
 \section{Resultados e Discussão}
@@ -80,23 +112,10 @@ Apresente os resultados obtidos e discuta-os criticamente.
 % ---------- CONSIDERAÇÕES FINAIS / CONCLUSÃO ----------
 \section{Considerações Finais / Conclusão}
 
-Síntese dos achados, contribuições, limitações e sugestões futuras. \cite{exemplo2020}.
+Síntese dos achados, contribuições, limitações e sugestões futuras.
 
 % ---------- REFERÊNCIAS ----------
 \newpage
-\begin{thebibliography}{9}
-
-\bibitem{exemplo2020}
-SOBRENOME, Nome.
-\textit{Título da obra}.
-Edição. Cidade: Editora, Ano.
-
-\bibitem{exemplo2021}
-SOBRENOME, Nome.
-Título do artigo.
-\textit{Nome da Revista}, Cidade, v. X, n. X, p. XX-XX, Ano.
-
-\end{thebibliography}
+\bibliography{references} 
 
 \end{document}
-
