@@ -5,7 +5,11 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry} % Margens ABNT
 \usepackage{setspace} % Espaçamento entre linhas
+\usepackage{indentfirst}
+\usepackage{threeparttable}
 \onehalfspacing % Espaçamento 1,5 (padrão ABNT)
+
+% ---------- PACOTES DE CITAÇÃO E BIBLIOGRAFIA (ABNT) ----------
 \usepackage[alf,num=false,abnt-etal-cite=2,abnt-etal-list=0,abnt-etal-text=it]{abntex2cite}
 
 % Dados do trabalho
@@ -95,9 +99,56 @@ Adotou-se a \textbf{pesquisa bibliográfica} \cite[p.~39]{gerhardt_silveira} cuj
 \subsection{Levantamento Bibliográfico}
 \label{levantamento}
 
+Neste tópico são detalhados os procedimento adotados para a pesquisa bibliográfica para técnicas de virtualização de laboratórios para fins acadêmicos, e integrações com a Internet das Coisas (IoT).
+
 \subsubsection{Strings de Busca}
 
+Definiram-se strings de busca relacionadas ao tema em questão, submetidas a bases de dados como ACM Digital Library, Google Scholar, IEEE Xplore e Scopus. A Tabela \ref{tab:search_strings} apresenta uma síntese dos resultados obtidos, incluindo o número de resultados brutos e o número de trabalhos remanescentes após a aplicação dos critérios de seleção descritos na Seção \ref{criterios}. Foram considerados trabalhos publicados no período dos últimos 5 anos (2021-2026).
+
+\begin{table}[h]
+    \centering
+    \caption{Strings de busca e resultados obtidos por base de dados}
+    \begin{tabular}{| p{6cm} | p{1.5cm} | p{1.75cm} | p{1.5cm} |}
+        \hline
+        \textbf{String de Busca} & \textbf{Base de Dados} & \textbf{Resultados Brutos} & \textbf{Após Critérios} \\ \hline
+        \lq\lq digital twin\rq\rq AND (\lq\lq remote lab*\rq\rq OR \lq\lq virtual lab*\rq\rq) & Google Scholar & 17500 & \\ \hline
+        \lq\lq digital twin\rq\rq AND (\lq\lq remote lab*\rq\rq OR \lq\lq virtual lab*\rq\rq) & IEEE Xplore & 138 & \\ \hline
+        \lq\lq digital twin\rq\rq AND (\lq\lq remote lab*\rq\rq OR \lq\lq virtual lab*\rq\rq) & ACM &  & \\ \hline
+        metaverse AND education & Google Scholar & 30200 & \\ \hline
+        metaverse AND education & IEEE Xplore & 952 & \\ \hline
+        metaverse AND education & ACM & 1714 & \\ \hline
+        \lq\lq digital twin\rq\rq AND bidirectional & Google Scholar & 19000 & \\ \hline
+        \lq\lq digital twin\rq\rq AND bidirectional & IEEE Xplore & 468 & \\ \hline
+        \lq\lq digital twin\rq\rq AND bidirectional & ACM & 973 & \\ \hline
+        (\lq\lq virtual reality\rq\rq OR \lq\lq extended reality\rq\rq OR \lq\lq XR\rq\rq) AND (\lq\lq collaborative\rq\rq OR \lq\lq multi-user\rq\rq) AND (\lq\lq digital twin\rq\rq OR \lq\lq laboratory\rq\rq) & Google Scholar & 13600 & \\ \hline
+    \end{tabular}
+    \label{tab:search_strings}
+\end{table}
+
 \subsubsection{Critérios de Seleção}
+\label{criterios}
+
+Os artigos identificados a partir das strings de busca foram avaliados segundo os critérios de inclusão e exclusão descritos a seguir.
+
+\textbf{Critérios de inclusão} -- o artigo deve satisfazer ao menos um dos seguintes requisitos:
+
+\begin{enumerate}
+    \item Aborda arquiteturas ou mecanismos de sincronização entre um ambiente virtual (ou metaverso) e um equipamento físico real;
+    \item Descreve implementações de gêmeos digitais aplicados a laboratórios educacionais ou de pesquisa;
+    \item Reporta métricas de desempenho de rede (e.g., latência, \textit{throughput}, \textit{jitter}) relevantes para comunicação bidirecional em tempo real;
+    \item Compara resultados de aprendizagem entre ambientes virtuais/remotos e laboratórios presenciais;
+    \item Foi publicado em periódico ou conferência com revisão por pares, nos últimos dez anos.
+\end{enumerate}
+
+\textbf{Critérios de exclusão} -- o artigo será descartado caso se enquadre em pelo menos um dos itens abaixo:
+
+\begin{enumerate}
+    \item Trata de gêmeos digitais exclusivamente em contexto industrial ou de manufatura, sem relação com educação ou laboratórios remotos;
+    \item Não possui texto completo disponível para acesso;
+    \item É duplicata de um trabalho já identificado em outra base de dados;
+    \item Consiste em resumo, pôster ou artigo com menos de quatro páginas;
+    \item Emprega o termo ``metaverso'' de forma genérica ou mercadológica, sem contribuição técnica ou científica concreta.
+\end{enumerate}
 
 \subsection{Prova de Conceito}
 
